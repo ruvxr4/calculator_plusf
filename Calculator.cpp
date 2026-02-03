@@ -1,43 +1,37 @@
 #include <stdio.h>
 
-int add(int a, int b);
-int sub(int a, int b);
-int mul(int a, int b);
+int mul(int a, int b); 
 
-int main()
-{
+int main() {
     int num1, num2, result;
     char op;
 
-    printf("simple Calculator (*)\n");
-    printf("enter first num: ");
+    printf("Simple Multiplication Calculator (*)\n");
+    
+    printf("Enter first num: ");
     scanf("%d", &num1);
 
-    printf("enter operator (*): ");
-    scanf(" %c", &op);
+    printf("Enter operator (*): ");
+    scanf(" %c", &op);   
 
-    printf("enter second num: ");
+    printf("Enter second num: ");
     scanf("%d", &num2);
 
-    else if (op == '*')
-    {
+    if (op == '*') {
         result = mul(num1, num2);
-    }
-    else
-    {
-        printf("invalid operator! pls try again\n");
+    } else {
+        printf("Invalid operator! Please use '*'\n");
         return 0;
     }
 
-    printf("\nprocess:\n");
+    printf("\nProcess:\n");
     printf("%d %c %d\n", num1, op, num2);
-    printf("result:\n");
+    printf("Result:\n");
     printf("%d\n", result);
 
     return 0;
 }
 
-int mul(int a, int b)
-{
-    return a * b;//lovelove
+int mul(int a, int b) {
+    return a * b;
 }
